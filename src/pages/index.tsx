@@ -5,17 +5,21 @@ import Head from 'next/head';
 import { productsAPI } from '../services/productsAPI';
 
 import { Dashboard } from '../views/Dashboard';
+import { Header } from '../components/Header';
 
 export interface Product {
   id: number;
   name: string;
   brand: string;
   description: string;
-  price: number;
+  photo: string;
+  price: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
 interface HomeProps {
-  products: Array<Product>;
+  products: Product[];
 }
 
 export default function Home({ products }: HomeProps) {
@@ -25,7 +29,7 @@ export default function Home({ products }: HomeProps) {
         <title>MKS Store</title>
       </Head>
 
-      <Dashboard products={products} />
+      <Dashboard products={products} />    
     </>
   );
 }
@@ -36,13 +40,13 @@ export const getStaticProps: GetStaticProps = async () => {
     `/products?page=1&rows=12&sortBy=name&orderBy=ASC`
   );
 
-  const products = response.data;
+  const products = response.data.products;
   console.log(products);
 
   return {
     props: {
       products,
     },
-    revalidate: 60 * 60 * 24 * 30, // revalidate every 30 days
+    revalidate: 60 * 60 * 24, // revalidate every 24 hours
   };
 };

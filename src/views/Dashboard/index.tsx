@@ -13,24 +13,30 @@ export function Dashboard({ products }: DashboardProps) {
     // addProduct(id);
   }
 
+  console.log(products);
+  
+
   return (
     <ProductList>
-      {products.map(product => {
-        return (
-          <li key={product.id}>
-            <img src={product.brand} alt={product.name} />
-            <strong>{product.name}</strong>
-            <span>{product.price}</span>
-            <button
-              type="button"
-              data-testid="add-product-button"
-              onClick={() => handleAddProduct(product.id)}
-            >
-              <span>ADICIONAR AO CARRINHO</span>
-            </button>
-          </li>
-        )
-      })}
+      <ul>
+        {products.map(product => {
+          return (
+            <li key={product.id}>
+              <img src={product.photo} alt={product.name} />
+              <strong>{`${product.brand} ${product.name}`}</strong>
+              <span>{product.price}</span>
+              <button
+                type="button"
+                data-testid="add-product-button"
+                onClick={() => handleAddProduct(product.id)}
+              >
+                <img src="/images/shopping-bag.svg" alt="shopping-bag" />
+                <span>comprar</span>
+              </button>
+            </li>
+          )
+        })}
+      </ul>
     </ProductList>
   );
 };
