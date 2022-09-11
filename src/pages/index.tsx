@@ -41,8 +41,7 @@ export const getStaticProps: GetStaticProps = async () => {
   );
 
   const products = response.data.products;
-  console.log(products);
-
+  
   return {
     props: {
       products,
