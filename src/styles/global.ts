@@ -8,6 +8,7 @@ export default createGlobalStyle`
     --gray-color: #eee;
     --black-color: #000;
     --border-color: #BFBFBF;
+    --input-bg-color: #373737;
   }
 
   * {

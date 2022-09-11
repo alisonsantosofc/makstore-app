@@ -17,7 +17,7 @@ export function Dashboard({ products }: DashboardProps) {
   const [isOpenCart, setIsOpenCart] = useState(false);
 
   function handleAddProduct(product: IProduct) {
-    dispatch(addProduct(product))
+    dispatch(addProduct(product));
   }
 
   return (
@@ -27,15 +27,25 @@ export function Dashboard({ products }: DashboardProps) {
           {products.map((product) => {
             return (
               <li key={product.id}>
-                <img src={product.photo} alt={product.name} />
-                <strong>{`${product.brand} ${product.name}`}</strong>
-                <span>R${Number(product.price).toLocaleString('pt-BR')}</span>
+                <picture>
+                  <img src={product.photo} alt={product.name} />
+                </picture>
+
+                <p>
+                  <strong>{`${product.brand} ${product.name}`}</strong>
+                  <span>R${Number(product.price).toLocaleString('pt-BR')}</span>
+                </p>
+
+                <p>{product.description}</p>
+
                 <button
                   type="button"
                   data-testid="add-product-button"
                   onClick={() => handleAddProduct(product)}
                 >
-                  <img src="/images/shopping-bag.svg" alt="shopping-bag" />
+                  <picture>
+                    <img src="/images/shopping-bag.svg" alt="shopping-bag" />
+                  </picture>
                   <span>comprar</span>
                 </button>
               </li>

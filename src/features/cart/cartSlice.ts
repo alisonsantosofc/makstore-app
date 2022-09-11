@@ -33,9 +33,7 @@ export const cartSlice = createSlice({
       );
 
       if (!productExists) {
-        Object.assign(product, {
-          amount: 1,
-        });
+        product = {...product, amount: 1};
   
         state.products.push(product);
       } else {
