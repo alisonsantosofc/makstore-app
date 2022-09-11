@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
 
-export const ProductList = styled.div`
+export const ProductsList = styled.div`
   padding-top: 100px;
   display: flex;
   justify-content: center;

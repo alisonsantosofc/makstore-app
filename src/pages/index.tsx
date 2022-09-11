@@ -7,7 +7,7 @@ import { productsAPI } from '../services/productsAPI';
 import { Dashboard } from '../views/Dashboard';
 import { Header } from '../components/Header';
 
-export interface Product {
+export interface IProduct {
   id: number;
   name: string;
   brand: string;
@@ -19,7 +19,7 @@ export interface Product {
 }
 
 interface HomeProps {
-  products: Product[];
+  products: IProduct[];
 }
 
 export default function Home({ products }: HomeProps) {

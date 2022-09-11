@@ -1,39 +1,83 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { toast } from 'react-toastify';
 
 import type { AppState } from '../../app/store';
-import { Product } from '../../pages';
+import { IProduct } from '../../pages';
+
+export interface Product extends IProduct {
+  amount: number;
+}
 
 export interface CartState {
   products: Product[];
-  total: number;
+  isOpen: boolean,
 }
 
 const initialState: CartState = {
   products: [],
-  total: 0,
+  isOpen: false,
 };
 
 export const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
+    setIsOpenCart: (state, action) => {
+      state.isOpen = action.payload;
+    },
     addProduct: (state, action) => {
-      const product: Product = action.payload;
+      let product: Product = action.payload;
 
-      state.products.push(product);
-      state.total += Number(product.price);
+      const productExists = state.products.find(
+        (productFind) => productFind.id === product.id
+      );
+
+      if (!productExists) {
+        Object.assign(product, {
+          amount: 1,
+        });
+  
+        state.products.push(product);
+      } else {
+        productExists.amount = productExists.amount + 1;
+      }
+    },
+    updateProductAmount: (state, action) => {
+      const { productId, amount } = action.payload;
+
+      if (amount <= 0) {
+        return;
+      }
+
+      const productExists = state.products.find(
+        (product) => product.id === productId
+      );
+
+      if (productExists) {
+        productExists.amount = amount;
+      } else {
+        throw Error();
+      }
     },
     removeProduct: (state, action) => {
-      const product: Product = action.payload;
+      const productId = action.payload;
+      const productIndex = state.products.findIndex(
+        (product) => product.id === productId
+      );
 
-      state.products.filter((product) => product.id !== product.id);
-      state.total -= Number(product.price);
+      if (productIndex >= 0) {
+        state.products.splice(productIndex, 1);
+      } else {
+        throw Error();
+      }
     },
   },
 });
 
-export const { addProduct, removeProduct } = cartSlice.actions;
+export const { setIsOpenCart, addProduct, updateProductAmount, removeProduct } =
+  cartSlice.actions;
 
 export const selectProducts = (state: AppState) => state.cart.products;
+export const selectIsOpenCart = (state: AppState) => state.cart.isOpen;
 
 export default cartSlice.reducer;

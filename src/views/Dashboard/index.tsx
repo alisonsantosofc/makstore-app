@@ -1,33 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { Product } from '../../pages';
+import { IProduct } from '../../pages';
 import { Cart } from '../../features/cart/Cart';
 
-import { ProductList } from './styles';
+import { ProductsList } from './styles';
+import { addProduct } from '../../features/cart/cartSlice';
+import { useAppDispatch } from '../../app/hooks';
 
 interface DashboardProps {
-  products: Product[];
+  products: IProduct[];
 }
 
 export function Dashboard({ products }: DashboardProps) {
-  function handleAddProduct(id: number) {
-    // addProduct(id);
+  const dispatch = useAppDispatch();
+
+  const [isOpenCart, setIsOpenCart] = useState(false);
+
+  function handleAddProduct(product: IProduct) {
+    dispatch(addProduct(product))
   }
 
   return (
     <>
-      <ProductList>
+      <ProductsList>
         <ul>
           {products.map((product) => {
             return (
               <li key={product.id}>
                 <img src={product.photo} alt={product.name} />
                 <strong>{`${product.brand} ${product.name}`}</strong>
-                <span>{product.price}</span>
+                <span>R${Number(product.price).toLocaleString('pt-BR')}</span>
                 <button
                   type="button"
                   data-testid="add-product-button"
-                  onClick={() => handleAddProduct(product.id)}
+                  onClick={() => handleAddProduct(product)}
                 >
                   <img src="/images/shopping-bag.svg" alt="shopping-bag" />
                   <span>comprar</span>
@@ -36,7 +42,7 @@ export function Dashboard({ products }: DashboardProps) {
             );
           })}
         </ul>
-      </ProductList>
+      </ProductsList>
 
       <Cart />
     </>
