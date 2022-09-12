@@ -6,6 +6,8 @@ import { Cart } from '../../features/cart/Cart';
 import { ProductsList } from './styles';
 import { addProduct } from '../../features/cart/cartSlice';
 import { useAppDispatch } from '../../app/hooks';
+import { toast } from 'react-toastify';
+import { Toast } from '../../../components/Toast';
 
 interface DashboardProps {
   products: IProduct[];
