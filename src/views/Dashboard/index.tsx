@@ -23,7 +23,7 @@ export function Dashboard({ products }: DashboardProps) {
 
     toast.success(
         <Toast
-          title="Pedido Recebido"
+          title="Produto Adicionado"
           message="Produto adicionado ao carrinho com sucesso, continue comprando."
           type="success"
         />
