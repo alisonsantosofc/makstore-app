@@ -57,15 +57,27 @@ export function Cart() {
   }
 
   function handleBuy() {
-    dispatch(buyProducts());
-    dispatch(setIsOpenCart(false));
-    toast.success(
-      <Toast
-        title="Pedido Recebido"
-        message={`Sua compra no valor de R$${total.toLocaleString('pt-BR')} foi realizada com sucesso!`}
-        type="success"
-      />
-    );
+    if (products.length > 0) {
+      dispatch(buyProducts());
+      dispatch(setIsOpenCart(false));
+      toast.success(
+        <Toast
+          title="Pedido Recebido"
+          message={`Sua compra no valor de R$${total.toLocaleString(
+            'pt-BR'
+          )} foi realizada com sucesso!`}
+          type="success"
+        />
+      );
+    } else {
+      toast.warning(
+        <Toast
+          title="Carrinho Vazio"
+          message={'Você ainda não adicionou nenhum produto no carrinho, tente novamente.'}
+          type="warning"
+        />
+      );
+    }
   }
 
   return (
