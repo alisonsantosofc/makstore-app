@@ -20,6 +20,14 @@ export function Dashboard({ products }: DashboardProps) {
 
   function handleAddProduct(product: IProduct) {
     dispatch(addProduct(product));
+
+    toast.success(
+        <Toast
+          title="Pedido Recebido"
+          message="Produto adicionado ao carrinho com sucesso, continue comprando."
+          type="success"
+        />
+      );
   }
 
   return (
