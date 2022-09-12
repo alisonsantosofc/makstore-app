@@ -77,6 +77,14 @@ export const Container = styled.section`
     width: 100%;
     padding: 0 1.5rem;
 
+    > div {
+      margin-top: 1rem;
+
+      h2 {
+        font-size: 1.4rem;
+      }
+    }
+
     > p {
       font-size: 1.2rem;
       bottom: 3rem;
@@ -196,8 +204,13 @@ export const ProductsInCart = styled.ul`
     padding: 0.5rem;
 
     li {
+      picture {
+        width: 18%;
+        margin-right: 0.5rem;
+      }
       p {
         font-size: 0.7rem;
+        margin-right: 0.5rem;
       }
 
       div {
@@ -215,6 +228,7 @@ export const ProductsInCart = styled.ul`
       }
 
       > span {
+        margin-left: 1rem;
         font-size: 0.7rem;
       }
 
