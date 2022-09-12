@@ -2,6 +2,7 @@ import React from 'react';
 import { MdAdd, MdClose, MdRemove } from 'react-icons/md';
 
 import {
+  buyProducts,
   Product,
   removeProduct,
   selectIsOpenCart,
@@ -12,11 +13,18 @@ import {
 import { useAppDispatch, useAppSelector } from '../../../app/hooks';
 
 import { Container, ProductsInCart } from './styles';
+import { toast } from 'react-toastify';
+import { Toast } from '../../../components/Toast';
 
 export function Cart() {
   const dispatch = useAppDispatch();
   const products = useAppSelector(selectProducts);
   const isOpen = useAppSelector(selectIsOpenCart);
+
+  const productsFormatted = products.map((product) => ({
+    ...product,
+    subTotal: product.amount * Number(product.price),
+  }));
 
   const total = products.reduce((sumTotal, product) => {
     return (sumTotal += product.amount * Number(product.price));
@@ -48,6 +56,18 @@ export function Cart() {
     dispatch(setIsOpenCart(false));
   }
 
+  function handleBuy() {
+    dispatch(buyProducts());
+    dispatch(setIsOpenCart(false));
+    toast.success(
+      <Toast
+        title="Pedido Recebido"
+        message={`Sua compra no valor de R$${total.toLocaleString('pt-BR')} foi realizada com sucesso!`}
+        type="success"
+      />
+    );
+  }
+
   return (
     <Container className={isOpen ? 'isOpen' : ''}>
       <div>
@@ -59,7 +79,7 @@ export function Cart() {
       </div>
 
       <ProductsInCart>
-        {products.map((product) => (
+        {productsFormatted.map((product) => (
           <li key={product.id}>
             <picture>
               <img src={product.photo} alt={product.name} />
@@ -74,25 +94,28 @@ export function Cart() {
               <span>Qtd:</span>
               <button
                 type="button"
-                role='decrement-product'
+                role="decrement-product"
                 disabled={product.amount <= 1}
                 onClick={() => handleProductDecrement(product)}
               >
                 <MdRemove />
               </button>
-              <span role='product-amount'>{product.amount}</span>
+              <span role="product-amount">{product.amount}</span>
               <button
                 type="button"
-                role='increment-product'
+                role="increment-product"
                 onClick={() => handleProductIncrement(product)}
               >
                 <MdAdd />
               </button>
             </div>
 
-            <span>R${Number(product.price).toLocaleString('pt-BR')}</span>
+            <span>R${Number(product.subTotal).toLocaleString('pt-BR')}</span>
 
-            <MdClose role='remove-product' onClick={() => handleRemoveProduct(product.id)} />
+            <MdClose
+              role="remove-product"
+              onClick={() => handleRemoveProduct(product.id)}
+            />
           </li>
         ))}
       </ProductsInCart>
@@ -102,7 +125,9 @@ export function Cart() {
         <span>R${total.toLocaleString('pt-BR')}</span>
       </p>
 
-      <button type="button">Finalizar Compra</button>
+      <button type="button" onClick={() => handleBuy()}>
+        Finalizar Compra
+      </button>
     </Container>
   );
 }

@@ -40,4 +40,22 @@ export default createGlobalStyle`
   button {
     cursor: pointer;
   }
+
+  .react-toastfy-container {
+    width: 25%;
+
+    @media (max-width: 1080px) {
+      width: 100%;
+    }
+  }
+
+  .react-toastfy-content {
+    font: 500 1rem "Montserrat", sans-serif;
+    background: var(--white-color);
+    width: 100%;
+
+    svg {
+      color: var(--main-color);
+    }
+  }
 `;

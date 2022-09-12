@@ -14,7 +14,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       <GlobalStyles />
-      <ToastContainer autoClose={5000} toastClassName="toast-container" />
+      <ToastContainer
+        autoClose={5000}
+        className="react-toastfy-container"
+        toastClassName="react-toastfy-content"
+        icon={false}
+      />
       <Header />
       <Footer />
       <Component {...pageProps} />

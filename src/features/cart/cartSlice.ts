@@ -10,7 +10,7 @@ export interface Product extends IProduct {
 
 export interface CartState {
   products: Product[];
-  isOpen: boolean,
+  isOpen: boolean;
 }
 
 const initialState: CartState = {
@@ -33,8 +33,8 @@ export const cartSlice = createSlice({
       );
 
       if (!productExists) {
-        product = {...product, amount: 1};
-  
+        product = { ...product, amount: 1 };
+
         state.products.push(product);
       } else {
         productExists.amount = productExists.amount + 1;
@@ -69,10 +69,13 @@ export const cartSlice = createSlice({
         throw Error();
       }
     },
+    buyProducts: (state) => {
+      state.products = [];
+    },
   },
 });
 
-export const { setIsOpenCart, addProduct, updateProductAmount, removeProduct } =
+export const { setIsOpenCart, addProduct, updateProductAmount, removeProduct, buyProducts } =
   cartSlice.actions;
 
 export const selectProducts = (state: AppState) => state.cart.products;
