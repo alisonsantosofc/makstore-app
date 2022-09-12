@@ -106,4 +106,13 @@ export const ProductsList = styled.div`
       }
     }
   }
+
+  @media (max-width: 1280px) {
+    margin-top: 1rem;
+    padding: 0 1rem;
+
+    ul {
+      grid-template-columns: 1fr;
+    }
+  }
 `;

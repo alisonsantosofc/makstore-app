@@ -17,4 +17,13 @@ export const Container = styled.header`
     justify-content: center;
     align-items: center;
   }
+
+  @media (max-width: 1280px) {
+    margin-top: 2rem;
+    position: relative;
+    
+    div {
+      font-size: 0.8rem;
+    }
+  }
 `;

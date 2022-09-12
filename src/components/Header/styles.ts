@@ -41,6 +41,18 @@ export const Container = styled.header`
       margin-left: 1rem;
     }
   }
+
+  @media (max-width: 1280px) {
+    padding: 0 1rem;
+
+    div {
+      strong {
+        font-size: 2rem;
+      }
+
+      span {
+        font-size: 1rem;
+      }
+    }
+  }
 `;
-
-

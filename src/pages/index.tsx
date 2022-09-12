@@ -5,7 +5,6 @@ import Head from 'next/head';
 import { productsAPI } from '../services/productsAPI';
 
 import { Dashboard } from '../views/Dashboard';
-import { Header } from '../components/Header';
 
 export interface IProduct {
   id: number;
