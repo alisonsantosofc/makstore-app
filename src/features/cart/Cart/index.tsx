@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { MdAdd, MdClose, MdRemove } from 'react-icons/md';
 
 import {
@@ -55,7 +55,7 @@ export function Cart() {
           Carrinho <br /> de compras
         </h2>
 
-        <MdClose onClick={() => handleCloseCart()} />
+        <MdClose role="close-cart" onClick={() => handleCloseCart()} />
       </div>
 
       <ProductsInCart>
@@ -74,16 +74,16 @@ export function Cart() {
               <span>Qtd:</span>
               <button
                 type="button"
-                data-testid="decrement-product"
+                role='decrement-product'
                 disabled={product.amount <= 1}
                 onClick={() => handleProductDecrement(product)}
               >
                 <MdRemove />
               </button>
-              <span data-testid="product-amount">{product.amount}</span>
+              <span role='product-amount'>{product.amount}</span>
               <button
                 type="button"
-                data-testid="increment-product"
+                role='increment-product'
                 onClick={() => handleProductIncrement(product)}
               >
                 <MdAdd />
@@ -92,7 +92,7 @@ export function Cart() {
 
             <span>R${Number(product.price).toLocaleString('pt-BR')}</span>
 
-            <MdClose onClick={() => handleRemoveProduct(product.id)} />
+            <MdClose role='remove-product' onClick={() => handleRemoveProduct(product.id)} />
           </li>
         ))}
       </ProductsInCart>
