@@ -2,10 +2,11 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 
 export const Container = styled.section`
+  z-index: 1;
   position: fixed;
   top: 0;
-  right: -586px;
-  width: 586px;
+  right: -30%;
+  width: 30%;
   height: 100vh;
   background: var(--main-color);
   color: var(--white-color);
@@ -70,6 +71,22 @@ export const Container = styled.section`
     right: 0;
     margin-bottom: 2rem;
   }
+
+  @media (max-width: 1080px) {
+    right: -100%;
+    width: 100%;
+    padding: 0 1.5rem;
+
+    > p {
+      font-size: 1.2rem;
+      bottom: 3rem;
+    }
+
+    > button {
+      height: 4rem;
+      font-size: 1.2rem;
+    }
+  }
 `;
 
 export const ProductsInCart = styled.ul`
@@ -133,16 +150,6 @@ export const ProductsInCart = styled.ul`
           top: -1.2rem;
           left: -0.5rem;
         }
-
-        &::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          min-width: 2px;
-          min-height: 12px;
-          color: var(--gray-color);
-        }
       }
 
       button {
@@ -182,6 +189,39 @@ export const ProductsInCart = styled.ul`
       color: var(--white-color);
       background: var(--black-color);
       cursor: pointer;
+    }
+  }
+
+  @media (max-width: 1080px) {
+    padding: 0.5rem;
+
+    li {
+      p {
+        font-size: 0.7rem;
+      }
+
+      div {
+        span {
+          font-size: 0.6rem;
+          margin: 0 0.2rem;
+
+          &:first-child {
+            font-size: 0.6rem;
+          }
+        }
+        button {
+          font-size: 0.6rem;
+        }
+      }
+
+      > span {
+        font-size: 0.7rem;
+      }
+
+      > svg {
+        width: 22px;
+        height: 22px;
+      }
     }
   }
 `;

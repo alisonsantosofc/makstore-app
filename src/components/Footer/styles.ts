@@ -21,8 +21,9 @@ export const Container = styled.header`
   @media (max-width: 1280px) {
     margin-top: 2rem;
     position: relative;
-    
+
     div {
+      max-width: 100vw;
       font-size: 0.8rem;
     }
   }
