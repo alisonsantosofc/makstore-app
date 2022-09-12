@@ -21,8 +21,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         icon={false}
       />
       <Header />
-      <Component {...pageProps} />
       <Footer />
+      <Component {...pageProps} />
     </Provider>
   );
 }
