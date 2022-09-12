@@ -90,7 +90,7 @@ export function Cart() {
         <MdClose role="close-cart" onClick={() => handleCloseCart()} />
       </div>
 
-      <ProductsInCart>
+      <ProductsInCart className={products.length > 4 && 'scroll-element'}>
         {productsFormatted.map((product) => (
           <li key={product.id}>
             <picture>

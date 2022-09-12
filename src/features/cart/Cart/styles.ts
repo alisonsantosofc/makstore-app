@@ -79,6 +79,10 @@ export const ProductsInCart = styled.ul`
   max-height: 60%;
   padding: 0.5rem 1rem;
 
+  &.scroll-element {
+    overflow-y: scroll;
+  }
+
   li {
     position: relative;
     display: flex;
