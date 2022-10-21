@@ -1,34 +1,107 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <div>
+     <img src="https://i.ibb.co/8PBvqDx/demo2.png" width="600px" alt="demo" />
+     <img src="https://i.ibb.co/f2NkwMP/demo1.png" height="300px" alt="demo" />
+  </div>
+</div>
 
-## Getting Started
+<h1 align="center">Mak Store App</h1>
+<p align="center">App developed in a challenge, using SSR and SSG in Next.js, unit tests with Jest, redux to manage states and styling with Styled Components.</p>
 
-First, run the development server:
+<br>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+<div align="center">
+  <span>
+    <img src="https://img.shields.io/badge/ReactJS-323330?style=for-the-badge&labelColor=00B4FF&color=00B4FF&logo=react&logoColor=ffffff"/>
+  </span>
+  <span>
+    <img src="https://img.shields.io/badge/NextJS-323330?style=for-the-badge&labelColor=080808&color=080808&logo=nextdotjs&logoColor=ffffff"/>
+  </span>
+  <span>
+    <img src="https://img.shields.io/badge/Typescript-323330?style=for-the-badge&labelColor=fafafa&color=1E7CE3&logo=typescript&logoColor=1E7CE3"/>         </span>
+  <span>
+    <img src="https://img.shields.io/badge/Jest-323330?style=for-the-badge&labelColor=080808&color=00B4FF&logo=jest&logoColor=00B4FF"/>
+  </span>
+  <span>
+    <img src="https://img.shields.io/badge/Styled Components-323330?style=for-the-badge&labelColor=E96DC9&color=E96DC9&logo=styledcomponents&logoColor=ffffff"/>
+    </span>
+</div>
+<br>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<p align="center"><a href="https://githubrepoexplorer.netlify.app/">Click here to access the deploy</a></p>
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<br>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+<p align="center">
+  <a href="#objective"><b>Objective</b></a> •
+  <a href="#starting"><b>Starting</b></a> •
+  <a href="#technologies"><b>Technologies</b></a> •
+  <a href="#license"><b>License</b></a>
+</p>
+<br>
+<br>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<div id="objective">
+  <h1>Objective</h1>
+  <p>
+    Develop an application to sell products, using Redux to manage the states, styles with Styled Components and unit tests with Jest.
+  </p>
+</div>
+<br>
 
-## Learn More
+<div id="starting">
+  <h1>Starting</h1>
 
-To learn more about Next.js, take a look at the following resources:
+  *Clone the project and access the folder*
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  ```bash
+  $ git clone https://github.com/alisonsantosofc/makstore-app
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+  $ cd makstore-app
+  ```
 
-## Deploy on Vercel
+  *Install the dependencies*
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  ```bash
+  $ npm i
+  ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  *Start the project in development environment*
+
+  ```bash
+  $ npm run dev
+  ```
+</div>
+<br>
+
+<div align="center" id="technologies">
+  <h1>Technologies</h1>
+
+  <p><a href="https://pt-br.reactjs.org/"><b>React JS</b></a> -  JavaScript Library</p>
+  
+  <p><a href="https://nextjs.org/"><b>Next JS</b></a> -  The React Framework</p>
+
+  <p><a href="https://www.typescriptlang.org/"><b>TypeScript</b></a> - Typed Programming Language</p>
+  
+  <p><a href="https://jestjs.io/pt-BR/"><b>Jest</b></a> - Delightful JavaScript Testing</p>
+
+  <p><a href="https://styled-components.com/docs"><b>Styled Components</b></a> - Styled CSS In JavaScript</p>
+</div>
+<br>
+
+<div align="center" id="license">
+
+</div>
+
+<br>
+<div align="center" id="autor">
+  <h1>License</h1>
+
+  <p>
+    <a href="https://opensource.org/licenses/MIT">
+      <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">
+    </a>
+  </p>
+
+  <p>&copy; 2022 Developed by <b><a href="https://github.com/alisonsantosofc">Alison Santos</a></b></p>
+</div>
