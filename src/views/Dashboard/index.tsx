@@ -7,6 +7,8 @@ import { ProductsList } from './styles';
 import { addProduct } from '../../features/cart/cartSlice';
 import { useAppDispatch } from '../../app/hooks';
 import Image from 'next/image';
+import { toast } from 'react-toastify';
+import { Toast } from '../../components/Toast';
 
 interface DashboardProps {
   products: IProduct[];
@@ -19,6 +21,14 @@ export function Dashboard({ products }: DashboardProps) {
 
   function handleAddProduct(product: IProduct) {
     dispatch(addProduct(product));
+
+    toast.success(
+        <Toast
+          title="Produto Adicionado"
+          message="Produto adicionado ao carrinho com sucesso, continue comprando."
+          type="success"
+        />
+      );
   }
 
   return (
