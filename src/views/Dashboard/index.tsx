@@ -6,6 +6,7 @@ import { Cart } from '../../features/cart/Cart';
 import { ProductsList } from './styles';
 import { addProduct } from '../../features/cart/cartSlice';
 import { useAppDispatch } from '../../app/hooks';
+import Image from 'next/image';
 
 interface DashboardProps {
   products: IProduct[];
@@ -43,9 +44,8 @@ export function Dashboard({ products }: DashboardProps) {
                   data-testid="add-product-button"
                   onClick={() => handleAddProduct(product)}
                 >
-                  <picture>
-                    <img src="/images/shopping-bag.svg" alt="shopping-bag" />
-                  </picture>
+                  <Image width={18} height={18} src="/images/shopping-bag.svg" alt="shopping-bag" />
+
                   <span>comprar</span>
                 </button>
               </li>

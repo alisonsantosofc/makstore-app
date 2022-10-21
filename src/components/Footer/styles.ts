@@ -6,7 +6,6 @@ export const Container = styled.header`
   left: 0;
   width: 100vw;
   height: 34px;
-  background: var(--gray-color);
 
   div {
     max-width: 80vw;

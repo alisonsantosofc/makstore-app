@@ -25,7 +25,7 @@ export default function Home({ products }: HomeProps) {
   return (
     <>
       <Head>
-        <title>MKS Store</title>
+        <title>MAK Store</title>
       </Head>
 
       <Dashboard products={products} />    

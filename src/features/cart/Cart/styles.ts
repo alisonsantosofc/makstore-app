@@ -9,7 +9,7 @@ export const Container = styled.section`
   width: 30%;
   height: 100vh;
   background: var(--main-color);
-  color: var(--white-color);
+  color: var(--black-color);
   padding: 0 2.5rem;
   box-shadow: -5px 0px 6px rgba(0, 0, 0, 0.13);
   transition: right ease-in 0.5s;
@@ -37,6 +37,7 @@ export const Container = styled.section`
       padding: 0.4rem;
       border-radius: 50%;
       background: var(--black-color);
+      color: var(--white-color);
       cursor: pointer;
     }
   }

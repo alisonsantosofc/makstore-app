@@ -76,27 +76,31 @@ export const ProductsList = styled.div`
 
     button {
       width: 100%;
-      color: #fff;
+      min-height: 2.5rem;
+      color: var(--black-color);
       padding: 0.5rem 0;
       border: 0;
       overflow: hidden;
-      background: #0f52ba;
       border-radius: 0px 0px 8px 8px;
-
       position: absolute;
       bottom: 0;
       left: 0;
       display: flex;
+      gap: 1rem;
       justify-content: center;
-      transition: background 0.2s;
+      align-items: center;
+      transition: all 0.2s;
+      background: var(--main-color);
+
 
       &:hover {
-        background: ${darken(0.06, '#0F52BA')};
+        filter: brightness(1.1);
       }
 
-      img {
-        width: 1rem;
-        margin-right: 1rem;
+      &:active {
+        > span {
+          font-size: 1rem;
+        }
       }
 
       span {

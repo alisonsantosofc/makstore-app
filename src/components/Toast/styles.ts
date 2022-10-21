@@ -14,12 +14,12 @@ export const Container = styled.div`
   .message-content {
     h4 {
       font-size: 1.2rem;
-      color: var(--text-color);
+      color: var(--white-color);
       margin-bottom: 0.5rem;
     }
 
     p {
-      color: var(--text-shape);
+      color: var(--gray-color);
     }
   }
 `;

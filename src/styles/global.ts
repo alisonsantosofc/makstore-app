@@ -3,12 +3,13 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default createGlobalStyle`
   :root {
-    --main-color: #0F52BA;
+    --main-color: #fac421;
     --white-color: #fff;
-    --gray-color: #eee;
-    --black-color: #000;
+    --gray-color: #d8d8d8;
+    --black-color: #242418;
     --border-color: #BFBFBF;
     --input-bg-color: #373737;
+    --text-color: #484848;
   }
 
   * {
@@ -51,7 +52,7 @@ export default createGlobalStyle`
 
   .react-toastfy-content {
     font: 500 1rem "Montserrat", sans-serif;
-    background: var(--white-color);
+    background: var(--black-color);
     width: 100%;
 
     svg {

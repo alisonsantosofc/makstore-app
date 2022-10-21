@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 import { selectProducts, setIsOpenCart } from '../../features/cart/cartSlice';
@@ -17,12 +18,12 @@ export function Header() {
   return (
     <Container>
       <div>
-        <strong>MKS</strong>
-        <span>Sistemas</span>
+        <strong>MAK</strong>
+        <span>Store</span>
       </div>
 
       <button type="button" onClick={() => handleOpenCart()}>
-        <img src="/images/cart.svg" alt="cart" />
+        <Image width={24} height={24} src="/images/cart.svg" alt="cart" />
         <span data-testid="cart-size">{cartSize}</span>
       </button>
     </Container>

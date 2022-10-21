@@ -5,7 +5,7 @@ export function Footer() {
     <Container>
       <div>
         <span>
-          <p>MKS Sistemas &copy; Todos os direitos reservados</p>
+          <p>MAK Sistemas &copy; Todos os direitos reservados</p>
         </span>
       </div>
     </Container>

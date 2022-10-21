@@ -10,16 +10,16 @@ export const Container = styled.header`
   background: var(--main-color);
 
   div {
-    color: var(--white-color);
+    color: var(--black-color);
 
     strong {
-      font-weight: 600;
+      font-weight: 700;
       font-size: 2.5rem;
       margin-right: 0.5rem;
     }
 
     span {
-      font-weight: 300;
+      font-weight: 500;
       font-size: 1.2rem;
     }
   }
@@ -30,10 +30,8 @@ export const Container = styled.header`
     padding: 1rem 1.5rem;
     border: none;
     border-radius: 8px;
-
-    img {
-      width: 1.2rem;
-    }
+    background: var(--black-color);
+    color: var(--white-color);
 
     span {
       font-size: 1rem;
