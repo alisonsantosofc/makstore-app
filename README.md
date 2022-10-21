@@ -1,7 +1,9 @@
 <div align="center">
   <div>
-     <img src="https://i.ibb.co/8PBvqDx/demo2.png" width="600px" alt="demo" />
+     <img src="https://i.ibb.co/6B4q0kr/slider.png" width="600px" alt="demo" />
+     <img src="https://i.ibb.co/YkmSZWH/demo2.png" width="600px" alt="demo" />
      <img src="https://i.ibb.co/f2NkwMP/demo1.png" height="300px" alt="demo" />
+    
   </div>
 </div>
 
@@ -18,12 +20,12 @@
     <img src="https://img.shields.io/badge/NextJS-323330?style=for-the-badge&labelColor=080808&color=080808&logo=nextdotjs&logoColor=ffffff"/>
   </span>
   <span>
-    <img src="https://img.shields.io/badge/Typescript-323330?style=for-the-badge&labelColor=fafafa&color=1E7CE3&logo=typescript&logoColor=1E7CE3"/>         </span>
+    <img src="https://img.shields.io/badge/Typescript-323330?style=for-the-badge&labelColor=1E7CE3&color=1E7CE3&logo=typescript&logoColor=fff"/>         </span>
   <span>
-    <img src="https://img.shields.io/badge/Jest-323330?style=for-the-badge&labelColor=080808&color=00B4FF&logo=jest&logoColor=00B4FF"/>
+    <img src="https://img.shields.io/badge/Jest-323330?style=for-the-badge&labelColor=F55A2C&color=F55A2C&logo=jest&logoColor=fff"/>
   </span>
   <span>
-    <img src="https://img.shields.io/badge/Styled Components-323330?style=for-the-badge&labelColor=E96DC9&color=E96DC9&logo=styledcomponents&logoColor=ffffff"/>
+    <img src="https://img.shields.io/badge/Styled Components-323330?style=for-the-badge&labelColor=E96DC9&color=E96DC9&logo=styledcomponents&logoColor=fff"/>
     </span>
 </div>
 <br>
