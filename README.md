@@ -14,13 +14,13 @@
 
 <div align="center">
   <span>
+    <img src="https://img.shields.io/badge/Typescript-323330?style=for-the-badge&labelColor=1E7CE3&color=1E7CE3&logo=typescript&logoColor=fff"/>           </span>
+  <span>
     <img src="https://img.shields.io/badge/ReactJS-323330?style=for-the-badge&labelColor=00B4FF&color=00B4FF&logo=react&logoColor=ffffff"/>
   </span>
   <span>
     <img src="https://img.shields.io/badge/NextJS-323330?style=for-the-badge&labelColor=080808&color=080808&logo=nextdotjs&logoColor=ffffff"/>
   </span>
-  <span>
-    <img src="https://img.shields.io/badge/Typescript-323330?style=for-the-badge&labelColor=1E7CE3&color=1E7CE3&logo=typescript&logoColor=fff"/>         </span>
   <span>
     <img src="https://img.shields.io/badge/Jest-323330?style=for-the-badge&labelColor=F55A2C&color=F55A2C&logo=jest&logoColor=fff"/>
   </span>
